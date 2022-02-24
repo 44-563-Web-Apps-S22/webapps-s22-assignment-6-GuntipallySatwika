@@ -24,29 +24,26 @@
 
 
 <p id="result">This text will be replaced </p>
-
 <script> 
-correct=0
-wrong=0
-function checkGuess (){
-    console.log("Getting form values")
-    name = document.getElementById("form1_name").value
-    guess = document.getElementById("form1_guess").value
-    //confirmed = confirm("Are these the values? "+name+" and "+guess)  
-    out = document.getElementById("result")
-    if(name == guess){
-        correct++
-        alert("You got it right")
-        out.innerHTML ="count ="+correct
-    } else {
-        wrong++
-        alert("Wrong President")
-        out.innerHTML ="count ="+wrong
+    correct=0
+    wrong=0
+    function checkGuess (){
+        console.log("Getting form values")
+        name = document.getElementById("form1_name").value
+        guess = document.getElementById("form1_guess").value
+        //confirmed = confirm("Are these the values? "+name+" and "+guess)  
+        out = document.getElementById("result")
+        if(name == guess){
+            correct++
+            alert("You got it right")
+            out.innerHTML ="count ="+correct
+        } else {
+            wrong++
+            alert("Wrong President")
+            out.innerHTML ="count ="+wrong
+        }
     }
-}
-</script>
+    </script>
 
 </body>
 </html> 
-    </body>
-</html>
