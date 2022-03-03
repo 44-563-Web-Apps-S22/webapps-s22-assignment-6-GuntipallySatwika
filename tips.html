@@ -14,6 +14,19 @@
 
     <input type="button" onclick="tips()" value="Find tips" style="margin-left: 90px;">
 </form>
+<form>
+    <input type="radio" id="r1" name="color" value="times" onclick="chooseOp()"   
+      checked >
+    <label for="rg1_times">*</label></br>
+  
+    <input type="radio" id="r2" name="color" 
+       value="divide" onclick="chooseOp()">
+    <label for="rg1_divide">/</label></br>
+  
+    <input type="radio" id="r3" name="color"   
+       value="exponent" onclick="chooseOp()">
+    <label for="rg1_exponent">**</label></br>
+</form>
 <p id="result" style="margin-left: 30px;">This text will be replaced </p><br>
 
 <script>
@@ -37,5 +50,30 @@ function tips()
 
 }
 </script>
+<p id="radioResults">This will display the radio results</p>
+<script>
+
+    function chooseOp(){
+        var amount = document.getElementById("form1_amount").value 
+        var tip = document.getElementById("form1_tip").value
+        expo = document.getElementById("r3").checked
+        time = document.getElementById("r1")
+        divide = document.getElementById("r2")
+    
+        if(expo)
+        {
+            document.getElementById("radioResults").innerHTML = "(amount * tip) value is : " + amount * tip 
+        }
+        else if(time.checked)
+        {
+            document.getElementById("radioResults").innerHTML = "(amount * tip) value is :" + amount * tip
+        }
+        else{
+            document.getElementById("radioResults").innerHTML = "(amount / tip) value is : " + amount / tip 
+        }
+    
+    }
+    </script>
+    
 </body>
 </html>
